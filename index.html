@@ -8,24 +8,22 @@
   </head>
   <body>
     <div id="rotate">Por favor, rotacione seu dispositivo para horizontal.</div>
-    <div class="geral">
-      <div class="container luckiest-guy-regular">
-        <h1>Jogo do Caixa</h1>
-        <div class="status">
-          <p>
-            <strong>Total da Compra:</strong> R$ <span id="total">0.00</span>
-          </p>
-          <h3>Troco:</h3>
-          <input
-            type="number"
-            id="player-input"
-            class=""
-            placeholder="Digite o troco"
-          />
-          <button onclick="troco()">Dar o troco e Finalizar Compra</button>
-        </div>
+    <div class="container luckiest-guy-regular">
+      <h1>Jogo do Caixa</h1>
+      <div class="status">
+        <p><strong>Total da Compra:</strong> R$ <span id="total">0.00</span></p>
+        <h3>Troco:</h3>
+        <input
+          type="number"
+          id="player-input"
+          class=""
+          placeholder="Digite o troco"
+        />
+        <button onclick="troco()">Dar o troco e Finalizar Compra</button>
+        <button id="toggleCalculator">Mostrar/Esconder Calculadora</button>
       </div>
-      <button id="toggleCalculator">Mostrar/Esconder Calculadora</button>
+    </div>
+    <div id="calculadora-container">
       <div id="calculadora">
         <input id="display" readonly />
         <div id="keys">
@@ -48,140 +46,136 @@
           <button onclick="limparTela()" class="operador-btn">C</button>
         </div>
       </div>
-
-      <div class="footer listagem luckiest-guy-regular">
-        <section>
-          <ul>
-            <li>
-              <div class="produto">
-                <img src="produtos/maça.webp" />
-                <h3>Maçã - R$ 1.99</h3>
-                <button onclick="scanItem('Maçã', 1.99)">Escanear</button>
-              </div>
-            </li>
-            <li>
-              <div class="produto">
-                <img src="produtos/Pão.png" />
-                <h3>Pão - R$ 0.99</h3>
-                <button onclick="scanItem('Pão', 0.99)">Escanear</button>
-              </div>
-            </li>
-            <li>
-              <div class="produto">
-                <img src="produtos/leite.png" />
-                <h3>Leite - R$ 2.99</h3>
-                <button onclick="scanItem('Leite', 2.99)">Escanear</button>
-              </div>
-            </li>
-            <li>
-              <div class="produto">
-                <img src="produtos/água.png" />
-                <h3>Água - R$ 1.99</h3>
-                <button onclick="scanItem('Água', 1.99)">Escanear</button>
-              </div>
-            </li>
-            <li>
-              <div class="produto">
-                <img src="produtos/bolacha.png" />
-                <h3>Bolacha Recheada - R$ 4.99</h3>
-                <button onclick="scanItem('Bolacha', 4.99)">Escanear</button>
-              </div>
-            </li>
-            <li>
-              <div class="produto">
-                <img src="produtos/frangoempanado.png" />
-                <h3>Empanado de Frango - R$ 18.99</h3>
-                <button onclick="scanItem('Empanado de Frango', 18.99)">
-                  Escanear
-                </button>
-              </div>
-            </li>
-            <li>
-              <div class="produto">
-                <img src="produtos/cafée.png" />
-                <h3>Café Torrado - R$ 6.89</h3>
-                <button onclick="scanItem('Café Torrado', 6.89)">
-                  Escanear
-                </button>
-              </div>
-            </li>
-            <li>
-              <div class="produto">
-                <img src="produtos/farinha.png" />
-                <h3>Farinha de Trigo - R$ 4.99</h3>
-                <button onclick="scanItem('Farinha de Trigo', 4.99)">
-                  Escanear
-                </button>
-              </div>
-            </li>
-            <li>
-              <div class="produto">
-                <img src="produtos/Sardinha.png" />
-                <h3>Sardinha em Lata - R$ 4.29</h3>
-                <button onclick="scanItem('Sardinha em lata', 4.29)">
-                  Escanear
-                </button>
-              </div>
-            </li>
-            <li>
-              <div class="produto">
-                <img src="produtos/Ervilha.png" />
-                <h3>Ervilha em Conserva - R$ 3.29</h3>
-                <button onclick="scanItem('Ervilha em Conserva', 3.29)">
-                  Escanear
-                </button>
-              </div>
-            </li>
-            <li>
-              <div class="produto">
-                <img src="produtos/Papel.png" />
-                <h3>Papel Higiênico - R$ 10.69</h3>
-                <button onclick="scanItem('Papel Higiênico', 10.69)">
-                  Escanear
-                </button>
-              </div>
-            </li>
-            <li>
-              <div class="produto">
-                <img src="produtos/extrato.png" />
-                <h3>Extrato de Tomate - R$ 1.19</h3>
-                <button onclick="scanItem('Extrato de Tomate', 1.19)">
-                  Escanear
-                </button>
-              </div>
-            </li>
-            <li>
-              <div class="produto">
-                <img src="produtos/gatorade.png" />
-                <h3>Gatorade - R$ 4.50</h3>
-                <button onclick="scanItem('Gatorade', 4.50)">Escanear</button>
-              </div>
-            </li>
-            <li>
-              <div class="produto">
-                <img src="produtos/açucar.png" />
-                <h3>Açucar - R$ 4.35</h3>
-                <button onclick="scanItem('Açucar', 4.35)">Escanear</button>
-              </div>
-            </li>
-            <li>
-              <div class="produto">
-                <img src="produtos/arroz.png" />
-                <h3>Arroz - R$ 7.89</h3>
-                <button onclick="scanItem('Arroz', 7.89)">Escanear</button>
-              </div>
-            </li>
-            <li>
-              <div class="produto">
-                <img src="produtos/cebola.png" />
-                <h3>Cebola - R$ 3.90</h3>
-                <button onclick="scanItem('Cebola', 3.90)">Escanear</button>
-              </div>
-            </li>
-          </ul>
-        </section>
-      </div>
-
+    </div>
+    <div class="footer listagem luckiest-guy-regular">
+      <section>
+        <ul>
+          <li>
+            <div class="produto">
+              <img src="produtos/maça.webp" />
+              <h3>Maçã - R$ 1.99</h3>
+              <button onclick="scanItem('Maçã', 1.99)">Escanear</button>
+            </div>
+          </li>
+          <li>
+            <div class="produto">
+              <img src="produtos/Pão.png" />
+              <h3>Pão - R$ 0.99</h3>
+              <button onclick="scanItem('Pão', 0.99)">Escanear</button>
+            </div>
+          </li>
+          <li>
+            <div class="produto">
+              <img src="produtos/leite.png" />
+              <h3>Leite - R$ 2.99</h3>
+              <button onclick="scanItem('Leite', 2.99)">Escanear</button>
+            </div>
+          </li>
+          <li>
+            <div class="produto">
+              <img src="produtos/água.png" />
+              <h3>Água - R$ 1.99</h3>
+              <button onclick="scanItem('Água', 1.99)">Escanear</button>
+            </div>
+          </li>
+          <li>
+            <div class="produto">
+              <img src="produtos/bolacha.png" />
+              <h3>Bolacha Recheada - R$ 4.99</h3>
+              <button onclick="scanItem('Bolacha', 4.99)">Escanear</button>
+            </div>
+          </li>
+          <li>
+            <div class="produto">
+              <img src="produtos/frangoempanado.png" />
+              <h3>Empanado de Frango - R$ 18.99</h3>
+              <button onclick="scanItem('Empanado de Frango', 18.99)">
+                Escanear
+              </button>
+            </div>
+          </li>
+          <li>
+            <div class="produto">
+              <img src="produtos/cafée.png" />
+              <h3>Café Torrado - R$ 6.89</h3>
+              <button onclick="scanItem('Café Torrado', 6.89)">Escanear</button>
+            </div>
+          </li>
+          <li>
+            <div class="produto">
+              <img src="produtos/farinha.png" />
+              <h3>Farinha de Trigo - R$ 4.99</h3>
+              <button onclick="scanItem('Farinha de Trigo', 4.99)">
+                Escanear
+              </button>
+            </div>
+          </li>
+          <li>
+            <div class="produto">
+              <img src="produtos/Sardinha.png" />
+              <h3>Sardinha em Lata - R$ 4.29</h3>
+              <button onclick="scanItem('Sardinha em lata', 4.29)">
+                Escanear
+              </button>
+            </div>
+          </li>
+          <li>
+            <div class="produto">
+              <img src="produtos/Ervilha.png" />
+              <h3>Ervilha em Conserva - R$ 3.29</h3>
+              <button onclick="scanItem('Ervilha em Conserva', 3.29)">
+                Escanear
+              </button>
+            </div>
+          </li>
+          <li>
+            <div class="produto">
+              <img src="produtos/Papel.png" />
+              <h3>Papel Higiênico - R$ 10.69</h3>
+              <button onclick="scanItem('Papel Higiênico', 10.69)">
+                Escanear
+              </button>
+            </div>
+          </li>
+          <li>
+            <div class="produto">
+              <img src="produtos/extrato.png" />
+              <h3>Extrato de Tomate - R$ 1.19</h3>
+              <button onclick="scanItem('Extrato de Tomate', 1.19)">
+                Escanear
+              </button>
+            </div>
+          </li>
+          <li>
+            <div class="produto">
+              <img src="produtos/gatorade.png" />
+              <h3>Gatorade - R$ 4.50</h3>
+              <button onclick="scanItem('Gatorade', 4.50)">Escanear</button>
+            </div>
+          </li>
+          <li>
+            <div class="produto">
+              <img src="produtos/açucar.png" />
+              <h3>Açucar - R$ 4.35</h3>
+              <button onclick="scanItem('Açucar', 4.35)">Escanear</button>
+            </div>
+          </li>
+          <li>
+            <div class="produto">
+              <img src="produtos/arroz.png" />
+              <h3>Arroz - R$ 7.89</h3>
+              <button onclick="scanItem('Arroz', 7.89)">Escanear</button>
+            </div>
+          </li>
+          <li>
+            <div class="produto">
+              <img src="produtos/cebola.png" />
+              <h3>Cebola - R$ 3.90</h3>
+              <button onclick="scanItem('Cebola', 3.90)">Escanear</button>
+          </li>
+        </ul>
+      </section>
+    </div>
       <div>
         <div class="fala luckiest-guy-regular">
           <p id="texto">Olá, amigo!</p>
